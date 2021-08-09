@@ -10,12 +10,13 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
+import { Cards } from './Components/Cards'
 
 function HomeScreen() {
   return (
     <SafeAreaView>
       <View>
-        <Text style={{ color: 'white' }}>Home Screen</Text>
+        <Cards />
       </View>
     </SafeAreaView>
   )
