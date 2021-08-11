@@ -13,6 +13,25 @@ export const Cards = (props) => {
 
     const testing = players[0].image
 {console.log(players[0].name)}
+console.log(players.name)
+
+    return(
+        <ScrollView>
+            <View>
+                {players.map((player) => ( 
+                <Tile
+                key={player.id}
+                title={player.name}
+                caption={player.description}
+                featured
+                imageSrc={require(`${player.image}`)}
+                /> 
+                ))}
+            </View>
+        </ScrollView>
+    )
+
+/*
     return(
         <ScrollView>
        <View>
@@ -38,6 +57,8 @@ export const Cards = (props) => {
         </ScrollView>
         
     )
+
+    */
 /*        <Card>
             <Card.Title>{props.name}</Card.Title>
             <Card.Divider />
