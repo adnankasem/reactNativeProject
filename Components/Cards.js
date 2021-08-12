@@ -14,6 +14,7 @@ export const Cards = (props) => {
     const testing = players[0].image
 {console.log(players[0].name)}
 console.log(players.name)
+const neymarImage = `../assets/neymar.jpg`
 
     return(
         <ScrollView>
@@ -24,7 +25,7 @@ console.log(players.name)
                 title={player.name}
                 caption={player.description}
                 featured
-                imageSrc={require(`${player.image}`)}
+                imageSrc={player.image}
                 /> 
                 ))}
             </View>
