@@ -10,8 +10,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
-
-import { Home } from './Components/HomeComponent'
+import { Cards, Home } from './Components/Screens'
+import Messi from './Components/Screens'
 
 function HomeScreen() {
   return (
@@ -23,16 +23,20 @@ function HomeScreen() {
   )
 }
 
+
 const HomeStack = createStackNavigator()
 
 function HomeScrenStack({ navigation }) {
   return (
     <HomeStack.Navigator
+    initialRouteName='Home'
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <HomeStack.Screen name='Home' component={HomeScreen}></HomeStack.Screen>
+      <HomeStack.Screen name='Messi' component={Messi}></HomeStack.Screen>
+      <HomeStack.Screen name='Cards' component={Cards}></HomeStack.Screen>
     </HomeStack.Navigator>
   )
 }
